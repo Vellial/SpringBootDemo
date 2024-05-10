@@ -17,12 +17,12 @@ public class UserProductController {
         this.productInterface = productInterface;
     }
 
-    @GetMapping(value = "/{productId:\\d+}")
+    @GetMapping(value = "/{productId}")
     public UserProduct getProduct(@PathVariable Long productId ) {
         return productInterface.getProductByProductId(productId);
     }
 
-    @GetMapping(value = "/{userId:\\d+}")
+    @GetMapping(value = "/{userId}")
     public List<UserProduct> getAllProducts(@PathVariable Long userId ) {
         return productInterface.getAllProductsByUserId(userId);
     }

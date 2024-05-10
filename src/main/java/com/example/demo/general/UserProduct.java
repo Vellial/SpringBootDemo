@@ -1,10 +1,10 @@
 package com.example.demo.general;
 
 public class UserProduct {
-    Long id;
-    String billingNumber;
-    Double balance;
-    String productType;
+    private Long id;
+    private String billingNumber;
+    private Double balance;
+    private String productType;
 
     Long userId;
 
