@@ -20,13 +20,4 @@ public class AppConfig {
         return new HikariDataSource(config);
     }
 
-//    @Bean
-//    public UserDao getUserDao() {
-//        return new UserDao(getDataSource());
-//    }
-//
-//    @Bean
-//    public UserService getUserService() {
-//        return new UserService(getUserDao());
-//    }
 }
