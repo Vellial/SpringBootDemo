@@ -1,12 +1,32 @@
 package com.example.demo.general;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user_products")
 public class UserProduct {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "billing_number")
     private String billingNumber;
+
+    @Column(name = "balance")
     private Double balance;
+
+    @Column(name = "product_type")
     private String productType;
 
     Long userId;
+
+    public UserProduct(String billingNumber, Double balance, String productType) {
+        this.balance = balance;
+        this.billingNumber = billingNumber;
+        this.productType = productType;
+    }
 
     public Long getId() {
         return id;
